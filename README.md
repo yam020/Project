@@ -1,6 +1,6 @@
 # Project
 Class Project for EEEB 4050 
-An outline of a new project idea (for now)
+<br> An outline of a new project idea (for now)
 
 ### Description of project goal:
 I am not sure. Something related to statistis and genetic? 
