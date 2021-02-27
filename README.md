@@ -25,4 +25,4 @@
   
 ### Description of user interaction:
 <br> Users can access the program by visit the website: ----------
-<br> Users can filter th trend graphs and the case map by zipcode and the COVID-19 they want to see. 
+<br> Users can filter th trend graphs and the case map by zipcode and whatever COVID-19 they want to observe. 
