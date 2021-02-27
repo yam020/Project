@@ -1,6 +1,5 @@
 # Project
-Class Project for EEEB 4050 
-<br> **New York City COVID-19 Interactive Charts**
+### New York City COVID-19 Interactive Charts
 <br> An outline of the project idea (for now)
 
 ### Description of project goal:
@@ -9,13 +8,13 @@ Class Project for EEEB 4050
 <br> The webapp also contains a case map of new york that display the new case/total case/tests/vaccine/death in each boroughs.
 
 ### Description of the code:
+<br> **folium**: To generat the map plots
+<br> **fastAPI**: To create the API interface
 <br> **pandas**: To organize and analyze the data 
 <br> **numpy**: To organize and analyz the data
 <br> **matplotlib**: To generate plots 
 <br> **altair**: To generate the trend plots
 <br> **bokeh**: To create interactive dashboard for the website  
-<br> **folium**: To generate the map plots
-<br> **fastAPI**: For the API interface 
 
 ### Description of the data:
 <br> I will access data programatically from a public online database using a REST API framework.
