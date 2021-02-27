@@ -18,12 +18,12 @@ Class Project for EEEB 4050
 <br> **fastAPI**: For the API interface 
 
 ### Description of the data:
-I will access data programatically from a public online database using a REST API framework.
+<br> I will access data programatically from a public online database using a REST API framework.
 <br> The public online database:
 - New York City Open Database: 
   - Modified Zip Code Tabulation Areas 
   - COVID-19 Daily Counts of Cases, Hospitalizations, and Deaths
   
 ### Description of user interaction:
-Users can access the program by visit the website: ----------
-Users can filter th trend graphs and the case map by zipcode and the COVID-19 they want to see. 
+<br> Users can access the program by visit the website: ----------
+<br> Users can filter th trend graphs and the case map by zipcode and the COVID-19 they want to see. 
