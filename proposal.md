@@ -62,7 +62,7 @@ The dataset is updated in May 19, 2020.
 
 ### Output 
 Here is a drawing of my final product in my mind. 
-![alt text](https://raw.githubusercontent.com/yam020/Project/main/img/product_blueprint.png)
+![alt text](https://raw.githubusercontent.com/yam020/NYCCIC/main/img/img.png)
 
 ### Currently exisiting/similar webapp/websites
 There are lots of Covid-19 trackers website existed, such as [New York Times](https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html), [New York Gov](https://www1.nyc.gov/site/doh/covid/covid-19-data.page#7day), [JHU](https://coronavirus.jhu.edu/us-map). Those websites are great resources. But in these website, it is very hard to track the coronvarius status by one single zipcode. Even some of the websites contain such information, it lacks visualiztion of these data, e.g. trend graph of Covid-19 in one zipcode. Also, the Covid-19 data by zipcode is relatively scattered. I would like to group them together and create a platform that can visualize these data easily and clearly. 
