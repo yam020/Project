@@ -40,7 +40,7 @@ data_show = data.loc[:, ['modzcta','pop_est']]
 print(data_show.head())
 ```
 #### Geodata
-THe geodata is same in the [previous section](#### Zipcode and population data). 
+THe geodata is same in the [previous section](# Zipcode and population data). 
 The data contains the coordinates as well. 
 
 <br> Below is an example: 
@@ -69,7 +69,7 @@ There are lots of Covid-19 trackers website existed, such as [New York Times](ht
 
 ### Description of the code:
 The packages I would like to use in the webapps are the following: 
-<br> **folium**: This package is used to generate the map plot. Specifically, I will make a chloropleth map. The [Geodata](#### Geodata) will be applied. 
+<br> **folium**: This package is used to generate the map plot. Specifically, I will make a chloropleth map. The [Geodata](# Geodata) will be applied. 
 <br> **altair**: This package is used to visualize the data. I chose this one over others simply because it looked nicer for me. The interesting interactive graphs examples are including: interactive legend, multi-line highlight, chloropleth map. I would like to adopted the former two graph type in my webapp.
 <br> The two packages below are used to clean, organize and analyze the data. 
 <br> **pandas**
