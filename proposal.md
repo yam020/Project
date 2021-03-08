@@ -40,7 +40,7 @@ data_show = data.loc[:, ['modzcta','pop_est']]
 print(data_show.head())
 ```
 #### Geodata
-The geodata is same in the [previous section](####Zipcode and population data). 
+The geodata is same in the [previous section](####Zipcode-and-population-data). 
 The data contains the coordinates as well. 
 
 <br> Below is an example: 
