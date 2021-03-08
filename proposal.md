@@ -9,7 +9,7 @@ The inspiration comes from my own experience in renting apartment during the pan
 
 ### Description of the project
 The Covid-19 data: case (new/total), death, test, hospitalized, vaccinated.
-<br> By entering the desired zipcode/boroughs, users are able to see the trend graphs of Covid-19 case/death/test/hospitalized/vaccinated number in that particular area. The webapp also provides a map of new york that display the new case/total case/tests/vaccine/death in New York City.The map is divided by zipcode. Users can move their mouse over to the interested area to check the Covid-19 situation.
+<br> By entering the desired zipcode/boroughs, users are able to see the trend graphs of Covid-19 case/death/test/hospitalized/vaccinated number in that particular area. The webapp also provides a map of new york that display the new case/total case/tests/vaccine/death in New York City. The map is divided by zipcode. Users can move their mouse over to the interested area to check the Covid-19 situation.
 
 ### Description of User interaction 
 Users can access the webapp by visiting website: -------. The webapp displays one trend graph and one map. For the trend graphs, users are able to enter the zipcode, or boroughs. Also, users can choose what type of Covid-19 data they want to observe. For the map, users can move their mouse over to their interested ares to check the data. All graphs can be zoom in/out. 
@@ -17,4 +17,9 @@ Users can access the webapp by visiting website: -------. The webapp displays on
 None
 
 ### Description of Data
+I initially planned to use restAPI to access the data in New York Open Database. With more researching, I found the dataset has no been updated since last December. Instead, I would like to use the Covid-19 data from [NYC health department](https://www1.nyc.gov/site/doh/covid/covid-19-data-totals.page#zip). They stored and updated their data in [github respitories](https://github.com/nychealth/coronavirus-data/tree/master/trends). The webapp uses the latest dataset when users access the webapp. The dataset contains case rate/death rate/hopitalized rate/positive rate/test rate by the zipcode. These data are all in csv format. Below is an example for the case rate data by zipcode.
+'''p
 
+I initially planned to use restAPI to access the data in New York Open Database. With more researching, I found the dataset has no been updated since last December. Instead, I would like to use the Covid-19 data from [NYC health department](https://www1.nyc.gov/site/doh/covid/covid-19-data-totals.page#zip). They stored and updated their data in [github respitories](https://github.com/nychealth/coronavirus-data/tree/master/trends). The webapp uses the latest dataset when users access the webapp. The dataset contains case rate/death rate/hopitalized rate/positive rate/test rate by the zipcode. These data are all in csv format. Below is an example for the case rate data by zipcode.
+
+```
