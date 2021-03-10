@@ -43,7 +43,7 @@ folium.Choropleth(
     fill_color="YlGn",
     fill_opacity=0.7,
     line_opacity=0.2,
-    legend_name="Unemployment Rate (%)",
+    legend_name="Percentage postive (%)",
 ).add_to(m)
 
 folium.LayerControl().add_to(m)
