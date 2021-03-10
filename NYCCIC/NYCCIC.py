@@ -1,9 +1,24 @@
+# import pacakages 
 import altair 
 import folium 
+import numpy
 import pandas as pd
-import numpy 
-import requests 
 
+class Data: 
+	# write different functions to extract data from the internet 
+	def data(case):
+		return ... # dataframe returned 
+class Trend:
+	# write different functions to generate different trend graphs 
+	def trendgraph(case, zipcode):
+		return ... # graph object 
+class Map: 
+	# write different functions to generate different map graphs 
+	def map(case):
+		return ... # map object 
+
+
+#### 03/09: My experiment in how things can be done in term of mapping using folium. 
 # import the data 
 # case rate by modzcta
 caserate = "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/trends/caserate-by-modzcta.csv"

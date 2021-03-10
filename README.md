@@ -9,4 +9,11 @@ cd ./NYCCIC
 pip install -e . 
 ```
 ### Note:
-Please open the notebooks/ to download the jupyter notebook. Visualization is shown in the jupyter notebook, before moving to the API. 
+```
+cd ./NYCCIC
+uvicorn NYCCIC.app:app
+```
+Or you can run the app.py directly. 
+
+Go to '/map'. You can see a map. (very rough version)
+Everything is under construction. 
