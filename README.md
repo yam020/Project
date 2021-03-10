@@ -8,3 +8,5 @@ git clone "https://github.com/yam020/NYCCIC.git"
 cd ./NYCCIC
 pip install -e . 
 ```
+### Note:
+Please open the notebooks/ to download the jupyter notebook. Visualization is shown in the jupyter notebook, before moving to the API. 

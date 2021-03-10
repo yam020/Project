@@ -40,17 +40,12 @@ data_show = data.loc[:, ['modzcta','pop_est']]
 print(data_show.head())
 ```
 #### Geodata
-The geodata is same in the [previous section](####Zipcode-and-population-data). 
-The data contains the coordinates as well. 
+The link for the geodata is (https://raw.githubusercontent.com/nychealth/coronavirus-data/master/Geography-resources/MODZCTA_2010_WGS1984.geo.json). 
 
 <br> Below is an example: 
 
 ```Python
-import requests
-response = requests.get(url="https://data.cityofnewyork.us/resource/pri4-ifjk.json")
-data= pd.json_normalize(response.json())
-data_show = data.loc[:, ['modzcta','the_geom']]
-print(data_show.head())
+NYC_geo = "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/Geography-resources/MODZCTA_2010_WGS1984.geo.json")
 ```
 #### Other info regarding the data
 ##### Covid-19 data
