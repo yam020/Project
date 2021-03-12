@@ -17,9 +17,9 @@ I think overall, the skeleton code was a great start! It was great to be able to
 
 ### Contributions
 There are a few things that I changed in the package:
-- The example file contained all of the skeleton code in one block at the bottom, and I separated these to prevent the file from becoming too cluttered.
+- The example file contained all of the skeleton code in one block at the bottom of NYCCIC.py, and I separated these into different functions and put them under classes named in the original file to prevent the single file from becoming too cluttered.
 
-- I noticed that data cleaning was happening under the Map class, but I felt that it made more sense to have in the Data class.
+- I noticed that data cleaning was happening under the Map class, but I felt that it made more sense to have in the Data class. I also changed the data cleaning to be chained instead.
 
 - Some of the naming is very specific (i.e. The string "percpos" is used many times as a reference to the percent positive column). I changed these strings to be capitalized and separated into what made the most sense per file. I feel like this will help a lot when using autocomplete, and if a name is changed in one file, it will automatically be changed in other places as well. You can see these constants in data.py; I put them here, because this is where the data parsing and selection occurs.
 
@@ -35,3 +35,4 @@ There are a few things that I changed in the package:
 - When I first go to the map, it shows the entire US. Is there an option to auto-zoom to just NYC?
 - If you look in Map and Data, you can see I added self.data_type and self.type, respectively. However, this is based on the assumption that you're not combining multiple data points into one map (i.e. putting death rate and percent positive on the map at the same time). If this is the case, then you might want to make a list for your map (self.data_types, self.types) and add methods like overlay for Map and combine_data for Data.
 - Instead of having the message be a JSON on the "/" route, you could make a few buttons to click on to redirect to the different maps.
+- I noticed that the date variable was created (currently on data.py line 36). If you decide to omit this, you can chain the other df_clean columns below; I just wasn't sure if that dataframe would be modified later. If it's not omitted, I definitely think that there's potential for a slider option to provide a range of dates that a user can look at.
