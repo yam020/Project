@@ -3,6 +3,7 @@ import uvicorn
 from fastapi.responses import HTMLResponse
 
 from .map import Map
+from .trend import Trend
 
 # create the app as an instance of the fastAPI class
 app = FastAPI()

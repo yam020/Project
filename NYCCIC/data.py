@@ -1,5 +1,4 @@
 # import packages 
-import numpy
 import pandas as pd
 
 CASERT = "casert"
