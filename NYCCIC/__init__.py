@@ -2,5 +2,6 @@
 """
 ...
 """
-from NYCCIC.NYCCIC import Data
-from NYCCIC.NYCCIC import Map
+from .data import Data
+from .map import Map
+from .trend import Trend

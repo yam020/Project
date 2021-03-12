@@ -1,12 +1,8 @@
-import folium 
-import numpy
-import pandas as pd
-from NYCCIC.NYCCIC import Data
-from NYCCIC.NYCCIC import Map
-
 from fastapi import FastAPI
 import uvicorn
 from fastapi.responses import HTMLResponse
+
+from .map import Map
 
 # create the app as an instance of the fastAPI class
 app = FastAPI()
@@ -26,8 +22,8 @@ def root():
 # Codes will be more refined later 
 @app.get("/map", response_class=HTMLResponse)
 def map():
-	m = Map()
-	m = m.map("percpos")
+	m = Map("percpos")
+	m = m.map()
 	return m._repr_html_()
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
