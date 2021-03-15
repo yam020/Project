@@ -1,12 +1,9 @@
-import folium 
-import numpy
-import pandas as pd
-from NYCCIC.NYCCIC import Data
-from NYCCIC.NYCCIC import Map
-
 from fastapi import FastAPI
 import uvicorn
 from fastapi.responses import HTMLResponse
+
+from .map import Map
+from .trend import Trend
 
 # create the app as an instance of the fastAPI class
 app = FastAPI()
@@ -16,7 +13,7 @@ app = FastAPI()
 # create a root endpoint that provide basic information about the webapp
 @app.get("/")
 def root():
-	return {"message": "go to /map to see the map"}
+	return {"message": """Go to /map/DATA_TYPE to see the map with its respective type. The current types available are percpos, deathrate, and casert."""}
 
 # create another endpoint for displaying the trend graph
 #@app.get("/trend")
@@ -24,10 +21,10 @@ def root():
 # create another endpoint for displaying the map 
 # Just try out 
 # Codes will be more refined later 
-@app.get("/map", response_class=HTMLResponse)
-def map():
-	Map = new (Map)
-	m = Map.map("percpos")
+@app.get("/map/{data_type}", response_class=HTMLResponse)
+def map(data_type: str):
+	m = Map(data_type)
+	m = m.map()
 	return m._repr_html_()
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
