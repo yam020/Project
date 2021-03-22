@@ -10,10 +10,9 @@ pip install -e .
 ```
 ### Note:
 ```
-cd ./NYCCIC
+cd ./NYCCIC/NYCCIC 
 uvicorn NYCCIC.app:app
 ```
-Or you can run the app.py directly. 
 
 Go to '/map'. You can see a map. (very rough version)
 Everything is under construction. 
