@@ -1,5 +1,5 @@
 import folium
-from .data import Data, ZIP_CODE, PERCPOS, DEATHRATE, CASERT
+from covid_data import Data 
 
 class Map:
     # write different functions to generate different map graphs 

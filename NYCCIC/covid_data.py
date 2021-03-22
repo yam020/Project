@@ -38,3 +38,4 @@ class Data:
 		df_clean.columns = [ZIP_CODE, self.type]
 		df_clean[self.type] = pd.to_numeric(df_clean[self.type], errors='ignore')
 		return df_clean
+	

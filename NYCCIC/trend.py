@@ -1,6 +1,6 @@
 import altair
 import numpy
-from .data import Data, ZIP_CODE, PERCPOS, DEATHRATE, CASERT
+from covid_data import Data 
 
 class Trend:
 	# write different functions to generate different trend graphs 

@@ -2,6 +2,6 @@
 """
 ...
 """
-from .data import Data
-from .map import Map
-from .trend import Trend
+from NYCCIC.covid_data import Data
+from NYCCIC.map import Map
+from NYCCIC.trend import Trend

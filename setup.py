@@ -10,5 +10,5 @@ from setuptools import setup
 setup(
 	name = "NYCCIC",
 	version = "0.0.1",
-	packages = ['NYCCIC']
+	packages = ['']
 )

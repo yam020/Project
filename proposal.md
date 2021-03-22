@@ -70,3 +70,6 @@ The packages I would like to use in the webapps are the following:
 <br> **pandas**
 <br> **numpy**
 <br> **fastAPI** is used to build API. 
+
+### Possible change
+In order to achieve the interactive interface, **streamlit** should be used instead of the **fastAPI**. I am currently learning the **streamlit** package. 
