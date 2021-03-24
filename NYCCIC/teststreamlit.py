@@ -1,3 +1,5 @@
+# streamlit run teststreamlit.py to run
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
@@ -12,7 +14,7 @@ This app is for visualizing the Covid19 data for NYC.
 """
 )
 
-st.markdown("## " + 'Case Count/Probable Case_Count')   
+st.markdown("## " + 'Case Count/Probable Case Count')   
 st.markdown("#### " +"What Trends would you like to see?")
 
 selected_metrics = st.selectbox(
@@ -24,8 +26,9 @@ if selected_metrics == 'Case Count':
     fig.add_trace(go.Scatter(x=df.date_of_interest, y=df.CASE_COUNT,
                     mode='lines',
                     name='Case_Count'))
-if selected_metrics == 'Probable_Case_Count':
+if selected_metrics == 'Probable Case Count':
     fig.add_trace(go.Scatter(x=df.date_of_interest, y=df.PROBABLE_CASE_COUNT,
-                        mode='markers', name='Probable_Case_Count'))
+                    mode='markers', 
+                    name='Probable_Case_Count'))
 
 st.plotly_chart(fig, use_container_width=True)
