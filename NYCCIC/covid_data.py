@@ -1,10 +1,6 @@
 # import packages 
 import pandas as pd
 
-CASERT = "casert"
-DEATHRATE = "deathrate"
-PERCPOS = "percpos"
-ZIP_CODE = "MODZCTA"
 
 class Data:
 	def __init__(self, string):
@@ -14,11 +10,11 @@ class Data:
 		self.load_data()
 
 	def load_data(self):
-		if self.type == CASERT:
+		if self.type == "CASERT":
 			url_string = f"{self.BASE_URL}caserate-by-modzcta.csv"
-		elif self.type == PERCPOS:
+		elif self.type == "PERCPOS":
 			url_string = f"{self.BASE_URL}percentpositive-by-modzcta.csv"
-		elif self.type == DEATHRATE:
+		elif self.type == "DEATHRATE":
 			url_string = f"{self.BASE_URL}deathrate-by-modzcta.csv"
 		else:
 			raise(f"{self.type} is not a valid type for the map.")
@@ -35,7 +31,7 @@ class Data:
 						.tail(1).reset_index(drop=True).T
 		date = df_clean.iloc[0,0]
 		df_clean = df_clean.iloc[1:].reset_index()
-		df_clean.columns = [ZIP_CODE, self.type]
-		df_clean[self.type] = pd.to_numeric(df_clean[self.type], errors='ignore')
+		df_clean.columns = ["modzcta", "percpos"]
+		df_clean[self.type] = pd.to_numeric(df_clean["percpos"], errors='ignore')
 		return df_clean
 	
