@@ -10,9 +10,9 @@ pip install -e .
 ```
 ### Note:
 ```
-cd ./NYCCIC/NYCCIC 
+cd /NYCCIC 
 uvicorn NYCCIC.app:app
 ```
 
-Go to '/map'. You can see a map. (very rough version)
+Go to '/PERCPOS'. You can see a map.
 Everything is under construction. 

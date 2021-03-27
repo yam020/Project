@@ -1,10 +1,6 @@
 from fastapi import FastAPI
-import uvicorn
 from fastapi.responses import HTMLResponse
-import pandas as pd 
-import folium
-
-from map import Map
+from NYCCIC.map import Map
 #from trend import Trend
 
 # create the app as an instance of the fastAPI class

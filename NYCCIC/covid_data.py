@@ -1,5 +1,6 @@
 # import packages 
 import pandas as pd
+import requests
 
 
 class Data:
@@ -32,6 +33,6 @@ class Data:
 		date = df_clean.iloc[0,0]
 		df_clean = df_clean.iloc[1:].reset_index()
 		df_clean.columns = ["modzcta", "percpos"]
-		df_clean[self.type] = pd.to_numeric(df_clean["percpos"], errors='ignore')
+		df_clean["percpos"] = pd.to_numeric(df_clean["percpos"], errors='ignore')
 		return df_clean
 	
