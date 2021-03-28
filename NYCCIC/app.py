@@ -6,23 +6,22 @@ from NYCCIC.map import Map
 # create the app as an instance of the fastAPI class
 app = FastAPI()
 
-# load the database once when the server starts
-
 # create a root endpoint that provide basic information about the webapp
-
-
 @app.get("/")
 def root():
-    return {"message": """Go to /map"""} 
+    return {"message": """Go to /map or /trend"""} 
 
+# create endpoint for displaying the map 
+@app.get("/map")
+def root():
+    return {"message": """Go to /PERCPOS or /TESTRT or /DEATHRT or /HOSPRT or /CASERT"""} 
 
-# create another endpoint for displaying the trend graph
-#@app.get("/trend")
+# create endpoint for displaying the trend graph
+@app.get("/trend")
+	return {"message": """Under Construction"""} 
 
-# create another endpoint for displaying the map 
-# Just try out 
-# Codes will be more refined later 
-@app.get("/{data_type}", response_class=HTMLResponse)
+# create endpoint for different data type 
+@app.get("/map/{data_type}", response_class=HTMLResponse)
 async def map(data_type: str):
     m = Map(data_type)
     m = m.map()
