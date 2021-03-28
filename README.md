@@ -14,5 +14,3 @@ cd /NYCCIC
 uvicorn NYCCIC.app:app
 ```
 
-Go to '/PERCPOS'. You can see a map.
-Everything is under construction. 
