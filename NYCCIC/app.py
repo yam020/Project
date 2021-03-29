@@ -18,6 +18,7 @@ def root():
 
 # create endpoint for displaying the trend graph
 @app.get("/trend")
+def root():
 	return {"message": """Under Construction"""} 
 
 # create endpoint for different data type 
