@@ -1,3 +1,9 @@
+#!/usr/env/bin python
+
+"""
+Main web app
+"""
+
 import altair_viewer
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
@@ -32,7 +38,7 @@ async def map(data_type: str):
 
 @app.get("/trend/{data_type}")
 def root():
- 	return {"message": """Type desired zipcode- Example:/11201,10001,10002,10005"""}
+    return {"message": """Type desired zipcode- Example:/11201,10001,10002,10005"""}
 
 @app.get("/trend/{data_type}/{zipcode}")
 async def map(data_type: str, zipcode: str):
