@@ -4,6 +4,7 @@ The project aims to create a webapp to visualize the Covid-19 data in New York C
 ```
 conda install altair -c conda-forge 
 conda install folium -c conda-forge
+conda install altair_viewer -c conda-forge
 git clone "https://github.com/yam020/NYCCIC.git"
 cd ./NYCCIC
 pip install -e . 
@@ -11,6 +12,6 @@ pip install -e .
 ### Note:
 ```
 cd /NYCCIC 
-uvicorn NYCCIC.app:app
+uvicorn app:app --reload
 ```
 

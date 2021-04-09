@@ -31,9 +31,9 @@ class Map:
             response['features'][idx]['properties']['tooltip'] = tooltip_text[idx]
         return response
 
-    def basic_map(self, response, df_clean,legend_name):
+    def basic_map(self, response, df_clean, legend_name):
         # create the basic map 
-        m = folium.Map(location=[40.7128,-73.9352], zoom_start=10, tiles = "cartodbpositron")
+        basicmap = folium.Map(location=[40.7128, -73.9352], zoom_start=10, tiles="cartodbpositron")
         choropleth = folium.Choropleth(
             geo_data=response,
             name="choropleth",
@@ -43,25 +43,25 @@ class Map:
             fill_color="OrRd",
             fill_opacity=0.7,
             line_opacity=0.2,
-            legend_name= legend_name
-        ).add_to(m)
-        folium.LayerControl().add_to(m)
+            legend_name=legend_name
+        ).add_to(basicmap)
+        folium.LayerControl().add_to(basicmap)
         # tooltip function 
         choropleth.geojson.add_child(
             folium.features.GeoJsonTooltip(['tooltip'], labels=False)
         )
-        return m 
+        return basicmap 
 
     def map(self):
         if self.data_type == "PERCPOS":
             # legend name 
             legend_name = "Percentage Positive %"
             # create the map
-            m = self.basic_map(self.response, self.df_clean, legend_name)
+            basicmap = self.basic_map(self.response, self.df_clean, legend_name)
         elif self.data_type == "CASERT" or "TESTRT" or "HOSPRT" or "DEATHRT":
             # legend name 
             legend_name = "Case Per 100,000 People"
             # create the map
-            m = self.basic_map(self.response, self.df_clean, legend_name)
+            basicmap = self.basic_map(self.response, self.df_clean, legend_name)
         # return the map object 
-        return m 
+        return basicmap
