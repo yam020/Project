@@ -19,7 +19,7 @@ class Trend:
         selected_data = df_clean[df_clean['Zipcode'].isin(zipcodels)]
         interval = alt.selection_interval()
         circle = alt.Chart(selected_data).mark_circle().encode(
-            x='Date: O',
+            x='Date:O',
             y='Zipcode',
             tooltip=['Zipcode', 'Date', 'Case'],
             color=alt.condition(interval, 'Zipcode', alt.value('lightgray')),
