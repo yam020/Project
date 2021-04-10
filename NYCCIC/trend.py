@@ -1,23 +1,37 @@
+#!/usr/bin/env python
+
+"""
+
+"""
+
 import altair as alt
 from NYCCIC.covid_data import Data 
 
-class Trend:
 
+class Trend:
     def __init__(self, datatype, zipcode):
         self.data = Data(datatype)
         self.zipcode = zipcode
         self.df_clean = self.data.get_all_data()
 
     def convert(self, string):
+        """
+        TODO: what is this?
+        """
         string = string.replace(' ', '')
         zipcode_list = list(string.split(','))
         return zipcode_list
 
     def trendmap(self):
+        """
+        TODO: what is this?
+        """
         df_clean = self.df_clean
         zipcodels = self.convert(self.zipcode)
         selected_data = df_clean[df_clean['Zipcode'].isin(zipcodels)]
         interval = alt.selection_interval()
+
+        # create the first chart
         circle = alt.Chart(selected_data).mark_circle().encode(
             x='Date:O',
             y='Zipcode',
@@ -28,11 +42,12 @@ class Trend:
                            legend=alt.Legend(title='Case Per 100,000 People')
                ) 
             ).properties(
-                   width=1000,
-                   height=300,
-                   selection=interval
+                width=1000,
+                height=300,
+                selection=interval
             ).interactive()
-       
+
+        # create the second chart       
         bars = alt.Chart(selected_data).mark_bar().encode(
             y='Zipcode',
             color='Zipcode',
@@ -44,3 +59,9 @@ class Trend:
             interval
         ).interactive()
         return circle & bars
+
+
+if __name__ == "__main__":
+
+    trend = Trend(datatype="TESTRT", zipcode="10002")
+    print(trend.trendmap())

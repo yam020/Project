@@ -1,3 +1,7 @@
+
+# PUT PROPER MODULE HEADERS HERE...
+
+
 import pandas as pd
 
 
@@ -78,3 +82,9 @@ class Data:
         for i in range(len(df_clean)):
             df_clean['Date'][i] = self.changetodate(df_clean['Date'][i])
         return df_clean
+
+
+if __name__ == "__main__":
+
+    data = Data("TESTRT")
+    print(data.get_all_data())
