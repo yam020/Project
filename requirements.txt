@@ -1,5 +1,0 @@
-# requirements.txt
-requests
-pandas
-fastAPI
-uvicorn
