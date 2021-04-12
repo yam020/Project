@@ -12,10 +12,15 @@ Currently, there are many Covid-19 data available online. My main goal is to use
 To do list: 
 1. Add comment and doc string for my codes (Priority)
 2. Made my project looks pretty and easy to use - Streamlit (Streamlit)
+3. Deploy webapp to a public url
 
 
  
 ### Intended Use
+
+#### Final Product
+Visit website: -----
+
 #### Install the Packages
 ```bash
 conda install altair -c conda-forge 
