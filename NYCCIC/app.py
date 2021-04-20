@@ -31,7 +31,10 @@ def root():
     -------
     A string
     """
-    return {"message": """Go to /map or /trend"""}
+    return {"message": """ Welcome To NYCCIC!
+                            If you want to see the map, go to /map 
+                            If you want to see the trend graphs, go to /trend
+                            Please note they are case sensitive"""}
 
 # create endpoint for displaying the map
 @app.get("/map")
@@ -47,7 +50,13 @@ def map():
     -------
     A string
     """
-    return {"message": """Go to /PERCPOS or /TESTRT or /DEATHRT or /HOSPRT or /CASERT"""}
+    return {"message": """There are several map you can see
+                         If you want to see the percentage postive map, got to /PERCPOS
+                         If you want to see the death rate map, go to /DEATHRT
+                         If you want to see the hospitalized rate map, go to /HOSPRT
+                         If you want to see the test rate map, go to /TESTRT
+                         If you want to see the case rate map, go to /CASERT
+                         Please note they are case sensitive"""}
 
 # create endpoint for displaying the trend graph
 @app.get("/trend")
@@ -63,7 +72,12 @@ def trend():
     -------
     A string
     """
-    return {"message": """Go to /TESTRT or /DEATHRT or /HOSPRT or /CASERT"""}
+    return {"message":  """There are several trend graphs you can see.
+                         If you want to see the death rate trend graph, go to /DEATHRT
+                         If you want to see the hospitalized rate trend graph, go to /HOSPRT
+                         If you want to see the test rate trend graph, go to /TESTRT
+                         If you want to see the case rate trend graph, go to /CASERT
+                         Please note they are case sensitive"""}
 
 
 # create endpoint for different data type
@@ -101,7 +115,9 @@ def trend_data():
     -------
     A string
     """
-    return {"message": """Type desired zipcode- Example:/11201,10001,10002,10005"""}
+    return {"message": """Please specify the zipcodes you would like to see
+                          For example,/11201,10001,10002,10005
+                          Please note there should be no space between zipcodes"""}
 
 # create endpoint for different data type based on the zipcode users enter
 @app.get("/trend/{data_type}/{zipcode}", response_class=HTMLResponse)
