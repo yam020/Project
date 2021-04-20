@@ -5,5 +5,3 @@ fastAPI
 uvicorn
 altair 
 folium 
-json
-
