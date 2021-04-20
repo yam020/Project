@@ -1,0 +1,10 @@
+# requirements.txt
+requests
+pandas
+fastAPI
+uvicorn
+altair 
+folium 
+io
+json
+
